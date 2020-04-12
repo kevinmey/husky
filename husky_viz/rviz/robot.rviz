@@ -122,6 +122,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        sensor_arch_mount_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         top_chassis_link:
           Alpha: 1
           Show Axes: false
@@ -141,6 +146,16 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
         user_rail_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        velodyne:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        velodyne_base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -397,6 +412,44 @@ Visualization Manager:
           Value: true
       Enabled: true
       Name: Navigation
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 0
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /velodyne_points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /occupied_cells_vis_array
+      Name: MarkerArray
+      Namespaces:
+        map: true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -423,25 +476,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 17.12980079650879
+      Distance: 12.96847915649414
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.629080057144165
-        Y: -0.08347029983997345
-        Z: -0.8487120270729065
+        X: -0.440371572971344
+        Y: -0.2986026704311371
+        Z: 0.3192325234413147
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.8848000764846802
+      Pitch: 0.5748002529144287
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.4254045486450195
+      Yaw: 0.042224910110235214
     Saved: ~
 Window Geometry:
   Displays:
@@ -459,5 +512,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1600
-  X: 67
-  Y: 27
+  X: 192
+  Y: 283
